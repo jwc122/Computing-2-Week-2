@@ -26,7 +26,16 @@ const Exam_questions = {
  * @returns {string} The shortest word in the input array.
  * @example shortest_word(["hello", "cat", "ok", "12345"]) // "ok";
  */
-Exam_questions.q1.shortest_word = function (word_array) {
+Exam_questions.q1.shortest_word = function shortestWord(word_array) {
+    if (word_array.length === 0) {
+        return;
+    }
+    return word_array.reduce(function (accumulator, current_value) {
+        if (accumulator.length <= current_value.length) {
+            return accumulator;
+        }
+        return current_value;
+    });
 };
 
 /**
@@ -39,7 +48,15 @@ Exam_questions.q1.shortest_word = function (word_array) {
  * @returns {number} The sum of the numeric entries.
  * @example sum_of_numbers(["hello", "cat", 2, true, 17, undefined]) // 19;
  */
-Exam_questions.q2.sum_of_numbers = function (array_of_any_type) {
+Exam_questions.q2.sum_of_numbers = function sum_of_numbers(array_of_any_type) {
+    if (isNaN(array_of_any_type)) {
+        var current_value = 0;
+    }
+    array_of_any_type.reduce(function (accumulator, current_value)) {
+        return accumulator + current_value;
+    }
+    return current_value;
+    });
 };
 
 /**
