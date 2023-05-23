@@ -95,6 +95,7 @@ Exam_questions.q3.longest_palindrome = function (string_array) {
  * @example perfect_squares(2, 16) // [4, 9, 16]
  */
 Exam_questions.q4.perfect_squares = function (a, b) {
+    
 };
 
 /**
